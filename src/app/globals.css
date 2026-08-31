@@ -1,0 +1,53 @@
+/*
+ * globals.css — Global styles for the entire application.
+ *
+ * In Next.js, this file is imported once in the root layout (app/layout.tsx).
+ * Any styles here apply to EVERY page in the app.
+ *
+ * Tailwind CSS v4 uses a single @import directive instead of the old
+ * @tailwind base/components/utilities directives.
+ *
+ * Docs: https://tailwindcss.com/docs/v4-beta
+ */
+@import "tailwindcss";
+
+/* ─── Custom CSS Variables ────────────────────────────────────────── */
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --accent: #3b82f6; /* blue-500 */
+  --accent-hover: #2563eb; /* blue-600 */
+  --card-bg: #111111;
+  --border: #222222;
+  --muted: #6b7280; /* gray-500 */
+}
+
+/* ─── Base Reset ──────────────────────────────────────────────────── */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Geist", "Inter", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Scrollbar Styling ───────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ─── Code Blocks ─────────────────────────────────────────────────── */
+pre, code {
+  font-family: "Geist Mono", "Fira Code", "Cascadia Code", monospace;
+}
